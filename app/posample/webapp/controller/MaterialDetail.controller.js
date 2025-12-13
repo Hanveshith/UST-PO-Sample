@@ -20,6 +20,7 @@ sap.ui.define([
                 const oView = this.getView();
                 const oModel = oView.getModel();
 
+                console.log(oView, oModel);
                 const sPath = oModel.createKey("/Materials", {
                     mm_id: sMaterialId
                 });

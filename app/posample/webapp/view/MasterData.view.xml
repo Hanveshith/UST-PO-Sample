@@ -12,6 +12,7 @@
                 id="materialTable"
                 inset="false"
                 items="{/Materials}"
+                class="sapUiResponsivePadding"
             >
                 <columns>
                     <Column id="_IDGenColumn33">
