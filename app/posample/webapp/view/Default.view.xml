@@ -1,0 +1,88 @@
+<mvc:View
+    controllerName="ust.po.sample.posample.controller.Default"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <GenericTile
+                id="_generictile1"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Master Data"
+                subheader="Click to view Material and vendor details"
+                press="toMasterData"
+                url="https://www.sap.com/"
+            >
+                <TileContent id="tilecontent1">
+                    <ImageContent
+                        id="imagecontent1"
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+            </GenericTile>
+                        <GenericTile
+                id="_generictile2"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Purchase Order Data"
+                subheader="Click to view PO Header and PO Items details"
+                press="toPoData"
+                url="https://www.sap.com/"
+            >
+                <TileContent id="tilecontent2">
+                    <ImageContent
+                        id="imagecontent2"
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                id="_generictile3"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Goods Receipt Data"
+                subheader="Click to view GR Header and GR Items details"
+                press="toGRData"
+                url="https://www.sap.com/"
+            >
+                <TileContent id="tilecontent3">
+                    <ImageContent
+                        id="imagecontent3"
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                id="_generictile4"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Invoice Data"
+                subheader="Click to view Invoice Header and Items details"
+                press="toINVData"
+                url="https://www.sap.com/"
+            >
+                <TileContent id="tilecontent4">
+                    <ImageContent
+                        id="imagecontent4"
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                id="_generictile5"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Audit Logs Data"
+                subheader="Click to view Audit logs"
+                press="toAuditLogs"
+                url="https://www.sap.com/"
+            >
+                <TileContent id="tilecontent5">
+                    <ImageContent
+                        id="imagecontent5"
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+            </GenericTile>
+        </content>
+    </Page>
+</mvc:View>

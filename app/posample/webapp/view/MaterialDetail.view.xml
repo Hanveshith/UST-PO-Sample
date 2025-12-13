@@ -1,0 +1,79 @@
+<mvc:View
+    height="100%"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="ust.po.sample.posample.controller.MaterialDetail">
+
+    <Page id="_IDGenPage1" title="Material Details">
+
+        <ObjectHeader id="_IDGenObjectHeader"
+            title="{mm_desc}"
+            intro="Material Code: {mm_code}"
+            number="{mm_gstno}"
+            numberUnit="GST"
+            numberState="Success"
+            responsive="true"
+            class="sapUiResponsivePadding--header">
+
+            <ObjectAttribute id="_IDGenObjectAttribute"
+                title="Active Status"
+                text="{is_Active}" />
+
+            <statuses>
+                <ObjectStatus id="_IDGenObjectStatus"
+                    text="{= ${is_Active} ? 'Active' : 'Inactive'}"
+                    state="{= ${is_Active} ? 'Success' : 'Error'}"/>
+            </statuses>
+
+            <headerContainer>
+                <IconTabBar id="_IDGenIconTabBar"
+                    selectedKey="key1"
+                    upperCase="true">
+                    <items> 
+                        <IconTabFilter id="_IDGenIconTabFilter"
+                            text="Items"
+                            key="key1">
+
+                            <l:VerticalLayout id="_IDGenVerticalLayout"
+                                width="100%">
+                                <l:content>
+                                    <Table id="realtedItems" items="{to_poitem}">
+                                        <columns>
+                                            <Column id="_IDGenColumn5" >
+                                                <Text id="_IDGenText16" text="Line Item Number"></Text>
+                                            </Column>
+                                            <Column id="_IDGenColumn6" >
+                                                <Text id="_IDGenText18" text="Material Code"></Text>
+                                            </Column>
+                                            <Column id="_IDGenColumn7" >
+                                                <Text id="_IDGenText19" text="Material Description"></Text>
+                                            </Column>
+                                            <Column id="_IDGenColumn8" >
+                                                <Text id="_IDGenText20" text="Item Status"></Text>
+                                            </Column>
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem id="_IDGenColumnListItem4" >
+                                                <cells>
+                                                    <Text id="_IDGenText" text="{po_lineitem_number}"></Text>
+                                                    <Text id="_IDGenText9" text="{po_item_materials}"></Text>
+                                                    <Text id="_IDGenText10" text="{po_item_materialsdesc}"></Text>
+                                                    <Text id="_IDGenText14" text="{po_item_status}"></Text>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </l:content>
+                            </l:VerticalLayout>
+
+                        </IconTabFilter>
+                    </items>
+
+                </IconTabBar>
+            </headerContainer>
+
+        </ObjectHeader>
+
+    </Page>
+</mvc:View>

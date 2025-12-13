@@ -1,0 +1,32 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="ust.po.sample.posample.controller.GRData">
+
+    <Page id="GRDataPage" title="GR Data" >
+        <content>
+
+            <Table id="grTable" inset="false" items="{grModel>/GRHeaders}">
+                <columns>
+                    <Column id="_IDGenColumn11"><Text id="_IDGenText11" text="GR Number" /></Column>
+                    <Column id="_IDGenColumn23"><Text id="_IDGenText31" text="Delivery Date" /></Column>
+                    <Column id="_IDGenColumn12"><Text id="_IDGenText21" text="Recieved Status" /></Column>
+                    <Column id="_IDGenColumn34"><Text id="_IDGenText41" text="Status" /></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <Text id="_IDGenText51" text="{grModel>gr_number}" />
+                            <Text id="_IDGenText71" text="{path:'grModel>gr_date', type:'sap.ui.model.type.Date'}" />
+                            <Text id="_IDGenText61" text="{grModel>gr_item_receivedquan}" />
+                            <Text id="_IDGenText81" text="{grModel>gr_status}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+
+</mvc:View>

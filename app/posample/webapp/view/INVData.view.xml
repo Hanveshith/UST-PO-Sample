@@ -1,0 +1,32 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="ust.po.sample.posample.controller.INVData">
+
+    <Page id="INVDataPage" title="Invoice Data" >
+        <content>
+
+            <Table id="invTable" inset="false" items="{invModel>/InvoiceHeaders}">
+                <columns>
+                    <Column id="_IDGenColumn10"><Text id="_IDGenText12" text="Inovice Header Number" /></Column>
+                    <Column id="_IDGenColumn13"><Text id="_IDGenText22" text="Vendor" /></Column>
+                    <Column id="_IDGenColumn24"><Text id="_IDGenText33" text="Invoice Date" /></Column>
+                    <Column id="_IDGenColumn35"><Text id="_IDGenText44" text="Status" /></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem2">
+                        <cells>
+                            <Text id="_IDGenText52" text="{invModel>inv_header_invnumber}" />
+                            <Text id="_IDGenText62" text="{invModel>inv_header_vendor}" />
+                            <Text id="_IDGenText72" text="{path:'invModel>inv_header_date', type:'sap.ui.model.type.Date'}" />
+                            <Text id="_IDGenText82" text="{invModel>inv_header_status}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+
+</mvc:View>
