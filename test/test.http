@@ -1,0 +1,10 @@
+###
+POST http://localhost:4004/po/POHeaders(po_id=10000000-0000-4000-8000-000000000001)/Submit
+Content-Type: application/json
+
+###
+POST http://localhost:4004/po/POHeaders(po_id=10000000-0000-4000-8000-000000000001)/Approve
+Content-Type: application/json
+
+###
+GET http://localhost:4004/po/POHeaders/10000000-0000-4000-8000-000000000001 

@@ -257,7 +257,7 @@ entity poheader : primary {
 
   @title : 'Total Value'
   @Common.Label : 'Total Value'
-  @readonly
+  // @readonly
   po_total_value : Integer default 0;
 
   @title : 'Status'
@@ -335,7 +335,6 @@ entity poitem : primary {
 
   @title : 'Net Price Value'
   @Common.Label : 'Net Price Value'
-  @readonly
   po_item_netprice_value : Integer;
 
   @title : 'Net Price Value 2'
@@ -344,12 +343,10 @@ entity poitem : primary {
 
   @title : 'Received Quantity'
   @Common.Label : 'Received Quantity'
-  @readonly
   po_item_received_quan : Integer default 0;
 
   @title : 'Open Quantity'
   @Common.Label : 'Open Quantity'
-  @readonly
   po_item_open_quan : Integer default 0;
 
   @title : 'Item Status'
