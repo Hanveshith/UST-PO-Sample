@@ -15,5 +15,6 @@
       "name": "POCAP",
       "database": "${workspaceFolder:POCAP}/db.sqlite"
     }
-  ]
+  ],
+  "breadcrumbs.enabled": true
 }
