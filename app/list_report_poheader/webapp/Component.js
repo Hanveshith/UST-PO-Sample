@@ -3,7 +3,7 @@ sap.ui.define(
     function (Component) {
         "use strict";
 
-        return Component.extend("ust.po.sample.list.poheader.listreportpoheader.Component", {
+        return Component.extend("ust.sample.po.listreportpoheader.Component", {
             metadata: {
                 manifest: "json"
             }

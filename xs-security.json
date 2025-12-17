@@ -1,0 +1,51 @@
+{
+  "xsappname": "po-management",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Buyer",
+      "description": "Buyer – can create and update purchase orders"
+    },
+    {
+      "name": "$XSAPPNAME.Approver",
+      "description": "Approver – can only approve/update purchase orders"
+    },
+    {
+      "name": "$XSAPPNAME.Manager",
+      "description": "Manager – full access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Buyer",
+      "description": "Buyer role",
+      "scope-references": [
+        "$XSAPPNAME.Buyer"
+      ]
+    },
+    {
+      "name": "Approver",
+      "description": "Approver role",
+      "scope-references": [
+        "$XSAPPNAME.Approver"
+      ]
+    },
+    {
+      "name": "Manager",
+      "description": "Manager role",
+      "scope-references": [
+        "$XSAPPNAME.Manager"
+      ]
+    }
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  },
+  "attributes": []
+}

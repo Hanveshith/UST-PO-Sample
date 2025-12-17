@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: ust.po.sample.list.poheader.listreportpoheader
+  name: ust.sample.po.listreportpoheader
 type: application
 server:
   customMiddleware:

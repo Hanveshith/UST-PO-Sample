@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "posample/webapp/index.html",
+  "authenticationMethod": "route",
+  "sessionTimeout": 100,
+  "pluginMetadataEndpoint": "/metadata",
+  "routes": [
+    {
+      "source": "^/posample/webapp/(.*)",
+      "target": "$1",
+      "localDir": "posample/webapp/",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)$",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

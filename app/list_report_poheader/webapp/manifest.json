@@ -1,7 +1,7 @@
 {
   "_version": "1.76.0",
   "sap.app": {
-    "id": "ust.po.sample.list.poheader.listreportpoheader",
+    "id": "ust.sample.po.listreportpoheader",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.20.0",
-      "toolsId": "a0f9f09a-c6d8-4565-b9f2-17283301425f"
+      "toolsId": "3481ac0c-5aba-4517-b435-2058878babc9"
     },
     "dataSources": {
       "mainService": {
@@ -60,7 +60,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ust.po.sample.list.poheader.listreportpoheader.i18n.i18n"
+          "bundleName": "ust.sample.po.listreportpoheader.i18n.i18n"
         }
       },
       "": {
@@ -160,5 +160,9 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "pocap"
   }
 }

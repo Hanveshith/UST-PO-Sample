@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sun Dec 14 2025 08:31:14 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Dec 15 2025 15:22:47 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.20.0|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -9,8 +9,8 @@
 |**Service Type**<br>Local CAP|
 |**Service URL**<br>http://localhost:4004/po/|
 |**Module Name**<br>list_report_poheader|
-|**Application Title**<br>List Report PO Header|
-|**Namespace**<br>ust.po.sample.list.poheader|
+|**Application Title**<br>List Report PO|
+|**Namespace**<br>ust.sample.po|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.143.2|
 |**Enable Code Assist Libraries**<br>False|
@@ -27,7 +27,7 @@ An SAP Fiori application.
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated app, start your CAP project:  and navigate to the following location in your browser:
 
-http://localhost:4004/ust.po.sample.list.poheader.listreportpoheader/index.html
+http://localhost:4004/ust.sample.po.listreportpoheader/index.html
 
 #### Pre-requisites:
 

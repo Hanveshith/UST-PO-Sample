@@ -3,27 +3,94 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="ust.po.sample.posample.controller.POData">
 
-    <Page id="PODataPage" title="PO Data" >
+    <Page
+        id="PODataPage"
+        title="Purchase Orders"
+        class="sapUiResponsivePadding--header
+               sapUiResponsivePadding--content">
+
         <content>
 
-            <Table id="poTable" inset="false" items="{poModel>/POHeaders}">
+            <Table
+                id="poTable"
+                inset="false"
+                growing="true"
+                growingScrollToLoad="true"
+                growingThreshold="10"
+                items="{poModel>/POHeaders}"
+                class="sapUiResponsiveContentPadding">
+
+                <headerToolbar>
+            <Toolbar id="_IDGenToolbar">
+                <Title id="_IDGenTitle" text="Materials" level="H2"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Button id="_IDGenButton"
+                    text="Create"
+                    icon="sap-icon://add"
+                    type="Transparent"
+                    press="onCreate"/>
+                    
+            </Toolbar>
+                </headerToolbar>
+
                 <columns>
-                    <Column id="_IDGenColumn"><Text id="_IDGenText1" text="PO Number" /></Column>
-                    <Column id="_IDGenColumn1"><Text id="_IDGenText2" text="Company Code" /></Column>
-                    <Column id="_IDGenColumn2"><Text id="_IDGenText3" text="Delivery Date" /></Column>
-                    <Column id="_IDGenColumn3"><Text id="_IDGenText4" text="Status" /></Column>
+                    <Column id="_IDGenColumn">
+                        <Text id="_IDGenText1" text="PO Number" />
+                    </Column>
+
+                    <Column id="_IDGenColumn1">
+                        <Text id="_IDGenText2" text="Company Code" />
+                    </Column>
+
+                    <Column id="_IDGenColumn2"
+                        hAlign="Center"
+                        minScreenWidth="Tablet"
+                        demandPopin="true">
+                        <Text id="_IDGenText3" text="Delivery Date" />
+                    </Column>
+
+                    <Column id="_IDGenColumn3"
+                        hAlign="Center">
+                        <Text id="_IDGenText4" text="Status" />
+                    </Column>
                 </columns>
 
                 <items>
-                    <ColumnListItem id="_IDGenColumnListItem">
+                    <ColumnListItem id="_IDGenColumnListItem"
+                        type="Navigation"
+                        highlight="{= ${poModel>po_status} === 'approved'
+                            ? 'Success'
+                            : ${poModel>po_status} === 'rejected'
+                            ? 'Error'
+                            : 'Information'}"
+                        press="onPOHeaderPress">
+
                         <cells>
-                            <Text id="_IDGenText5" text="{poModel>po_number}" />
-                            <Text id="_IDGenText6" text="{poModel>po_coco}" />
-                            <Text id="_IDGenText7" text="{path:'poModel>po_delivery_date', type:'sap.ui.model.type.Date'}" />
-                            <Text id="_IDGenText8" text="{poModel>po_status}" />
+                            <ObjectIdentifier id="_IDGenObjectIdentifier1"
+                                title="{poModel>po_number}" />
+
+                            <Text id="_IDGenText5" text="{poModel>po_coco}" />
+
+                            <Text id="_IDGenText6"
+                                text="{
+                                    path: 'poModel>po_delivery_date',
+                                    type: 'sap.ui.model.type.Date',
+                                    formatOptions: { style: 'medium' }
+                                }"
+                                textAlign="Center"/>
+
+                            <ObjectStatus id="_IDGenObjectStatus2"
+                                text="{poModel>po_status}"
+                                state="{= ${poModel>po_status} === 'approved'
+                                    ? 'Success'
+                                    : ${poModel>po_status} === 'rejected'
+                                    ? 'Error'
+                                    : 'Information'}"/>
                         </cells>
+
                     </ColumnListItem>
                 </items>
+
             </Table>
 
         </content>

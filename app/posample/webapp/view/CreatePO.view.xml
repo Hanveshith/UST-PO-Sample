@@ -1,0 +1,74 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="ust.po.sample.posample.controller.CreatePO">
+
+    <Page id="_IDGenPage2"
+        title="Create Purchase Order"
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        class="sapUiContentPadding">
+
+        <content>
+            <f:SimpleForm
+                id="poCreateForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="4"
+                labelSpanM="6"
+                labelSpanS="12">
+
+                <Title id="_IDGenTitle1" text="PO Header Details"/>
+
+                <Label id="_IDGenLabel" text="PO Number" required="true"/>
+                <Input id="_IDGenInput" value="{poCreateModel>/po_number}" type="Number"/>
+
+                <Label id="_IDGenLabel1" text="Vendor ID" required="true"/>
+                <Input id="_IDGenInput1" value="{poCreateModel>/po_vm_id}"/>
+
+                <Label id="_IDGenLabel2" text="Vendor Code"/>
+                <Input id="_IDGenInput2" value="{poCreateModel>/vendor}"/>
+
+                <Label id="_IDGenLabel3" text="Company Code" required="true"/>
+                <Input id="_IDGenInput3" value="{poCreateModel>/po_coco}"/>
+
+                <Label id="_IDGenLabel4" text="Purchasing Org" required="true"/>
+                <Input id="_IDGenInput4" value="{poCreateModel>/po_org}"/>
+
+                <Label id="_IDGenLabel5" text="Currency"/>
+                <Input id="_IDGenInput5" value="{poCreateModel>/po_curr}"/>
+
+                <Label id="_IDGenLabel6" text="Document Date"/>
+                <DatePicker id="_IDGenDatePicker" value="{poCreateModel>/po_doc_date}"/>
+
+                <Label id="_IDGenLabel7" text="Delivery Date"/>
+                <DatePicker id="_IDGenDatePicker1" value="{poCreateModel>/po_delivery_date}"/>
+
+                <Label id="_IDGenLabel8" text="Payment Terms"/>
+                <Input id="_IDGenInput6" value="{poCreateModel>/po_payment_terms}"/>
+
+                <Label id="_IDGenLabel9" text="Remarks"/>
+                <TextArea id="_IDGenTextArea" value="{poCreateModel>/po_remarks}" rows="3"/>
+
+            </f:SimpleForm>
+        </content>
+
+        <footer>
+            <Toolbar id="_IDGenToolbar1">
+                <ToolbarSpacer id="_IDGenToolbarSpacer"/>
+                <Button id="_IDGenButton1"
+                    text="Save"
+                    type="Emphasized"
+                    icon="sap-icon://save"
+                    press="onSave"/>
+                    
+                <Button id="_IDGenButton2"
+                    text="Cancel"
+                    press="onNavBack"/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

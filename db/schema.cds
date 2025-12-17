@@ -50,7 +50,7 @@ type payment_terms {
 }
 
 type approved_aspect {
-  po_approvedby : String(5) default 'BTP A';
+  po_approvedby : String(5);
   po_approvedat : DateTime;
 }
 

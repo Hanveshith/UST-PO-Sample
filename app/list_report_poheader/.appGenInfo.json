@@ -1,14 +1,14 @@
 {
   "generationParameters": {
-    "generationDate": "Sun Dec 14 2025 08:31:14 GMT+0000 (Coordinated Universal Time)",
+    "generationDate": "Mon Dec 15 2025 15:22:47 GMT+0000 (Coordinated Universal Time)",
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "Local CAP",
     "metadataFilename": "",
     "serviceUrl": "http://localhost:4004/po/",
     "appName": "list_report_poheader",
-    "appTitle": "List Report PO Header",
+    "appTitle": "List Report PO",
     "appDescription": "An SAP Fiori application.",
-    "appNamespace": "ust.po.sample.list.poheader",
+    "appNamespace": "ust.sample.po",
     "ui5Theme": "sap_horizon",
     "ui5Version": "1.143.2",
     "enableCodeAssist": false,
@@ -28,6 +28,6 @@
         "value": "to_poitem"
       }
     ],
-    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/ust.po.sample.list.poheader.listreportpoheader/index.html"
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/ust.sample.po.listreportpoheader/index.html"
   }
 }

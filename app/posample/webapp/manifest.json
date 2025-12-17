@@ -183,7 +183,7 @@
           "target": "POData"
         },
         {
-          "name" : "GRData",
+          "name": "GRData",
           "pattern": "togrdata",
           "target": "GRData"
         },
@@ -196,6 +196,16 @@
           "name": "AuditLogs",
           "pattern": "toauditlogs",
           "target": "AuditLogs"
+        },
+        {
+          "name": "CreatePO",
+          "pattern": "create-po",
+          "target": "CreatePO"
+        },
+        {
+          "name": "POItems",
+          "pattern": "po/{po_id}",
+          "target": "POItems"
         }
       ],
       "targets": {
@@ -207,7 +217,7 @@
           "id": "Master",
           "name": "MasterData"
         },
-        "MaterialDetail" :{
+        "MaterialDetail": {
           "id": "MaterialDetail",
           "name": "MaterialDetail"
         },
@@ -215,18 +225,26 @@
           "id": "podata",
           "name": "POData"
         },
-        "GRData" :{
+        "GRData": {
           "id": "grdata",
           "name": "GRData"
         },
-        "INVData" : {
+        "INVData": {
           "id": "invdata",
           "name": "INVData"
         },
-        "AuditLogs":{
+        "AuditLogs": {
           "id": "auditlogs",
           "name": "Auditlogs"
-        }
+        },
+        "CreatePO": {
+          "id": "createpo",
+          "name": "CreatePO"
+        },
+        "POItems": {
+    "id": "POItems",
+    "name": "POItems"
+  }
       }
     },
     "rootView": {
@@ -235,5 +253,9 @@
       "id": "App",
       "async": true
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "pocap"
   }
 }

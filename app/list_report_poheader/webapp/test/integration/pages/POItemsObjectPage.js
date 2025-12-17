@@ -8,7 +8,7 @@ sap.ui.define(['sap/fe/test/ObjectPage'], function(ObjectPage) {
 
     return new ObjectPage(
         {
-            appId: 'ust.po.sample.list.poheader.listreportpoheader',
+            appId: 'ust.sample.po.listreportpoheader',
             componentId: 'POItemsObjectPage',
             contextPath: '/POHeaders/to_poitem'
         },

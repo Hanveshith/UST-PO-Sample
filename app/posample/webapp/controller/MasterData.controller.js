@@ -14,7 +14,9 @@ sap.ui.define([
             this.oRouter.navTo("MaterialDetail", {
                 materialId: sMaterialId
             });
-        }
+        },
+
+
 
     });
 });

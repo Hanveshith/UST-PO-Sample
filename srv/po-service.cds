@@ -1,10 +1,14 @@
 using {po.ust as ust} from '../db/schema';
 
 @path: '/po'
-service POService {
+service POService{
 
   @Common.Label: 'Purchase Order Header'
   @(odata.draft.enabled: true)
+  @restrict: [
+    {grant : ['UPDATE'], to: 'Approver'},
+    {grant : ['READ','WRITE'], to: 'Buyer'}
+  ]
   entity POHeaders as
     projection on ust.poheader {
       *,

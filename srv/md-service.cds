@@ -5,7 +5,9 @@ using { po.ust as ust } from '../db/schema';
 service MasterDataService {
 
   @Common.Label : 'Vendors'
- 
+  @restrict : [
+    {grant : ['READ','WRITE'], to: 'Manager'}
+  ]
   entity Vendors as projection on ust.vendormaster;
 
   @Common.Label : 'Materials'
